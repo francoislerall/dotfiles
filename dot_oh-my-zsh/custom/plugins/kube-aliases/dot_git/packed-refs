@@ -1,0 +1,7 @@
+# pack-refs with: peeled fully-peeled sorted 
+7ea5dd6321ecd5ed43872955962ed68b4cc09d53 refs/remotes/origin/add_tests
+8c20e4b22912a921fd6599767596bdf44a8c4656 refs/remotes/origin/develop
+ca071f17ceac3b56ea37eea887ee48bf8d7677fc refs/remotes/origin/fix_plugin
+0736652dbbc2e50c075fd80a8cde73eea9305f67 refs/remotes/origin/generate-aliases
+bfba5b625d613522947b1f526728cfba9430af63 refs/remotes/origin/master
+abd3832e5b0104bf01089c1101039fb5fa18224d refs/tags/v1.0.0-beta

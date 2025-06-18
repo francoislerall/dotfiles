@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+# This script opens a folder selector and then opens a tmux session in that
+# folder.
+
+# if you have fzf installed:
+# - install script in ~/.local/bin
+# - add the following line to your .bashrc/.zshrc
+#   bindkey -s '^[^Y' "tmux-res\C-m"
+
+# if first argument is . then use pwd for selected.
+if [[ $# -eq 1 ]]; then
+    if [[ $1 == "." ]]; then
+        selected=$(pwd)
+    else
+        selected=$1
+    fi
+else
+    selected=$(find ~/code/onlineLCA/ ~/code/olca/ ~/code/tutorial/ ~/code/openLCA/ \
+            ~/code/EPDEditor/ ~/code/FCH-LCA/ ~/code/terraform/ ~/code/web/ ~/code/FPM/ \
+            ~/code/python ~/code/cs \
+        -mindepth 1 -maxdepth 1 -type d | fzf)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+
+
+selected_name=$(basename "$selected" | tr . _)
+# generate a unique socket name
+socket_name="${selected_name}_sock"
+tmux_running=$(pgrep tmux)
+
+if [[ -d $HOME/.local/share/tmux/resurrect ]]; then
+    for file in $HOME/.local/share/tmux/resurrect/tmux_resurrect_*; do
+        session_name=$(awk 'NR==1 {print $2}' $file)
+        if [[ $session_name == $selected_name ]]; then
+            ln -sf $file $HOME/.local/share/tmux/resurrect/last
+        fi
+    done
+fi
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux -L $socket_name new-session -s $selected_name -c $selected
+    exit 0
+fi
+
+if ! tmux has-session -t=$selected_name 2> /dev/null; then
+    echo "Creating session $selected_name"
+    tmux -L $socket_name new-session -ds $selected_name -c $selected
+fi
+
+if [[ -z $TMUX ]]; then
+    echo "Attaching to session $selected_name"
+    tmux -L $socket_name attach-session -t $selected_name
+    exit 0
+fi
+
+echo "Switching to session $selected_name"
+tmux -L $socket_name switch-client -t $selected_name
+
+tmux -L $socket_name kill-session -a -t $selected_name
