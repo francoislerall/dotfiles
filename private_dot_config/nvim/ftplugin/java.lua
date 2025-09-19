@@ -1,81 +1,94 @@
--- Highlight the 81st column
--- 1) Define a highlight group for our “overlength” character
-vim.cmd [[
-  highlight OverLength ctermbg=24 guibg=#005f87
-]]
+local jdtls = require 'jdtls'
 
--- 2) Use matchadd() to highlight *only* the 81st character on a line
---    if it exists (the pattern is "\%81v." in Vim regex).
-vim.fn.matchadd('OverLength', '\\%81v.', 100)
+-- Resolve JDTLS paths installed via Mason
+local home = os.getenv 'HOME'
+local jdtls_path = home .. '/.local/share/nvim/mason/packages/jdtls'
+local config_path = jdtls_path .. '/config_linux'
+local plugins_path = jdtls_path .. '/plugins'
+local launcher_jar = vim.fn.glob(plugins_path .. '/org.eclipse.equinox.launcher_*.jar')
 
-local mason_registry = require 'mason-registry'
-local jdtls_pkg = mason_registry.get_package 'jdtls'
-local jdtls_path = jdtls_pkg:get_install_path()
+local workspace_dir = home .. '/.cache/jdtls/workspace/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+local root_dir = vim.fs.root(0, { 'pom.xml' })
 
-local root_markers = { 'pom.xml', 'gradlew', 'mvnw', '.git' }
-local root_dir = vim.fs.dirname(vim.fs.find(root_markers, { upward = true })[1])
+local lombok_path = home .. '/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar'
 
--- Helper to collect all JAR files from a given path
-local function collect_jars(dir)
-  local jars = {}
-  local handle = io.popen('find ' .. dir .. ' -name "*.jar"')
-  if handle then
-    for jar in handle:lines() do
-      table.insert(jars, jar)
-    end
-    handle:close()
-  end
-  return jars
-end
-
--- Collect JARs from Eclipse bundle pool and olca-app libs
-local bundles = vim.tbl_extend(
-  'force',
-  collect_jars '/home/francois/code/openLCA/workspace/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins',
-  collect_jars '/home/francois/code/openLCA/olca-app/olca-app/libs'
-)
-
+-- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
-  cmd = { jdtls_path .. '/bin/jdtls' },
+  -- The command that starts the language server
+  -- See: https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line
+  cmd = {
+
+    -- 💀
+    'java', -- or '/path/to/java21_or_newer/bin/java'
+    -- depends on if `java` is in your $PATH env variable and if it points to the right version.
+
+    '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+    '-Dosgi.bundles.defaultStartLevel=4',
+    '-Declipse.product=org.eclipse.jdt.ls.core.product',
+    '-Dlog.protocol=true',
+    '-Dlog.level=ALL',
+    '-javaagent:' .. lombok_path,
+    '-Xmx1g',
+    '--add-modules=ALL-SYSTEM',
+    '--add-opens',
+    'java.base/java.util=ALL-UNNAMED',
+    '--add-opens',
+    'java.base/java.lang=ALL-UNNAMED',
+
+    -- 💀
+    '-jar',
+    launcher_jar,
+    -- '/path/to/jdtls_install_location/plugins/org.eclipse.equinox.launcher_VERSION_NUMBER.jar',
+    -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
+    -- Must point to the                                                     Change this to
+    -- eclipse.jdt.ls installation                                           the actual version
+
+    -- 💀
+    '-configuration',
+    config_path,
+    -- '/path/to/jdtls_install_location/config_SYSTEM',
+    -- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
+    -- Must point to the                      Change to one of `linux`, `win` or `mac`
+    -- eclipse.jdt.ls installation            Depending on your system.
+
+    -- 💀
+    -- See `data directory configuration` section in the README
+    '-data',
+    workspace_dir,
+    -- '/path/to/unique/per/project/workspace/folder'
+  },
+
+  -- 💀
+  -- This is the default if not provided, you can remove it. Or adjust as needed.
+  -- One dedicated LSP server & client will be started per unique root_dir
+  --
+  -- vim.fs.root requires Neovim 0.10.
+  -- If you're using an earlier version, use: require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
   root_dir = root_dir,
+
+  -- Here you can configure eclipse.jdt.ls specific settings
+  -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
+  -- for a list of options
   settings = {
     java = {
-      -- references = {
-      --   includeDecompiledSources = true,
-      -- },
-      format = {
-        enabled = false,
-        -- settings = {
-        --   url = 'file://' .. vim.fn.stdpath 'config' .. '/format/intellij-default.xml',
-        -- },
+      project = {
+        referencedLibraries = {},
       },
-      eclipse = {
-        downloadSources = true,
-      },
-      maven = {
-        downloadSources = true,
-      },
-      -- saveActions = {
-      --   organizeImports = true,
-      -- },
     },
+  },
+
+  -- Language server `initializationOptions`
+  -- You need to extend the `bundles` with paths to jar files
+  -- if you want to use additional eclipse.jdt.ls plugins.
+  --
+  -- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
+  --
+  -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
+  init_options = {
+    bundles = {},
   },
 }
 
--- for RCP projects, add bundles from the Eclipse workspace (../workspace)
--- local cwd = vim.fn.getcwd()
--- local project_name = vim.fs.basename(cwd)
---
--- -- Define the bundle path based on the project
--- local bundle_path = nil
--- if project_name == 'olca-app' or project_name == 'epd-editor' then
---   bundle_path = '../workspace/.metadata/.plugins/org.eclipse.pde.core/.bundle_pool/plugins'
--- end
---
--- if bundle_path then
---   config.init_options = {
---     bundles = vim.fn.glob(bundle_path .. '/*.jar', true, true), -- Add all .jar files in the bundle path
---   }
--- end
-
-require('jdtls').start_or_attach(config)
+-- This starts a new client & server,
+-- or attaches to an existing client & server depending on the `root_dir`.
+jdtls.start_or_attach(config)

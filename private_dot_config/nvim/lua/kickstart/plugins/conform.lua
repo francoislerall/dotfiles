@@ -36,10 +36,11 @@ return {
         python = { 'isort', 'black' },
         sh = { 'beautysh' },
         zsh = { 'beautysh' },
-        make = { 'checkmake' },
         go = { 'gofmt' },
         typescript = { 'prettierd', 'prettier' },
         yaml = { 'prettierd', 'prettier' },
+        markdown = { 'prettierd', 'prettier' },
+        html = { 'prettierd', 'prettier' },
 
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },

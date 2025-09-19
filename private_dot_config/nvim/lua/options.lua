@@ -69,8 +69,3 @@ vim.opt.scrolloff = 10
 -- zg – Good word: Add the word under the cursor to the dictionary
 -- zw – Woops! Undo and remove the word from the dictionary
 vim.opt.spell = true
-
--- Color 81th character on a line
-vim.cmd 'highlight ColorColumn ctermbg=magenta'
-vim.cmd 'call matchadd("ColorColumn", "\\%81v", 100)'
--- vim: ts=3 sts=2 sw=2 et

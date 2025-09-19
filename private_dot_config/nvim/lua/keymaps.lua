@@ -12,6 +12,14 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>')
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<CR>')
 
+-- Make copying to system clipboard easier
+vim.keymap.set({ 'n', 'v' }, '<leader>y', '"+y', { desc = 'Yank to system clipboard' })
+vim.keymap.set({ 'n', 'v' }, '<leader>Y', '"+Y', { desc = 'Yank end of line to system clipboard' })
+
+-- Make printing from the 0 register easier
+vim.keymap.set('n', '<leader>p', '"0p', { desc = 'Print from the 0 register' })
+vim.keymap.set('n', '<leader>P', '"0P', { desc = 'Print above from the 0 register' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

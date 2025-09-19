@@ -84,10 +84,6 @@ source ~/.secretrc
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Keybinding to open tmux session
-bindkey -s '^[^Y' "tmux-res\C-m"
 
-# Export environment variables if the current directory contains a .env file
-if [ -f .env ]; then
-    export $(grep -v '^#' .env | xargs)
-fi
+# Load Angular CLI autocompletion.
+source <(ng completion script)

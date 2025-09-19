@@ -61,7 +61,7 @@ return {
           --mappings = {
           --  i = { ['<c-enter>'] = 'to_fuzzy_refine' },
           --},
-          path_display = { 'shorten' },
+          path_display = { 'smart' },
         },
         extensions = {
           ['ui-select'] = {

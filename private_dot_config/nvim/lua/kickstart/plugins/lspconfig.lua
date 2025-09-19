@@ -78,7 +78,11 @@ return {
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
-          map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+          map('gr', function()
+            require('telescope.builtin').lsp_references {
+              show_line = false,
+            }
+          end, '[G]oto [R]eferences')
 
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
@@ -180,9 +184,6 @@ return {
         prettier = {},
         prettierd = {},
 
-        -- Java
-        jdtls = {},
-
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
@@ -217,9 +218,6 @@ return {
 
         -- JSON
         jsonlint = {},
-
-        -- Makefile
-        checkmake = {},
 
         -- Lua
         lua_ls = {

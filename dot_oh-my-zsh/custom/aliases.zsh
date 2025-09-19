@@ -8,7 +8,13 @@ ohmyzsh() {
     cd ~/.oh-my-zsh && "$EDITOR" .
 }
 nvimconf() {
-    cd ~/.config/nvim && "$EDITOR" .
+    tmux-res ~/.config/nvim/
+}
+olcapy() {
+    cd ~/openLCA-data-1.4/python && "$EDITOR" .
+}
+localbin() {
+    cd ~/.local/bin && "$EDITOR" .
 }
 
 alias py="python3.12"
@@ -18,17 +24,19 @@ alias gcfx="git commit --fixup"
 
 alias v="nvim"
 
-# Terraform
-alias tf='terraform'
-alias tfa='terraform apply'
-alias tfc='terraform console'
-alias tfd='terraform destroy'
-alias tff='terraform fmt'
-alias tfg='terraform graph'
-alias tfim='terraform import'
-alias tfin='terraform init'
-alias tfo='terraform output'
-alias tfor='terraform output -raw'
+# openTofu
+alias tf='tofu'
+alias tfa='tofu apply'
+alias tfc='tofu console'
+alias tfva='tofu validate'
+alias tfv='tofu --version'
+alias tfd='tofu destroy'
+alias tff='tofu fmt'
+alias tfg='tofu graph'
+alias tfim='tofu import'
+alias tfin='tofu init'
+alias tfo='tofu output'
+alias tfor='tofu output -raw'
 
 # SSH to Proxmox
 alias sshprox1="ssh root@51.89.67.15"

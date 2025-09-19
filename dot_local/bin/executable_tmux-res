@@ -16,9 +16,21 @@ if [[ $# -eq 1 ]]; then
         selected=$1
     fi
 else
-    selected=$(find ~/code/onlineLCA/ ~/code/olca/ ~/code/tutorial/ ~/code/openLCA/ \
-            ~/code/EPDEditor/ ~/code/FCH-LCA/ ~/code/terraform/ ~/code/web/ ~/code/FPM/ \
-            ~/code/python ~/code/cs \
+    selected=$(find \
+            ~/code/onlineLCA/ \
+            ~/code/olca/ \
+            ~/code/manual/ \
+            ~/code/tutorial/ \
+            ~/code/openLCA/ \
+            ~/code/openLCA/olca-app/ \
+            ~/code/EPDEditor/ \
+            ~/code/FCH-LCA/ \
+            ~/code/terraform/ \
+            ~/code/web/ \
+            ~/code/FPM/ \
+            ~/code/python \
+            ~/code/cs \
+            ~/code/GCCA \
         -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
@@ -28,15 +40,23 @@ fi
 
 
 
-selected_name=$(basename "$selected" | tr . _)
+parent=$(basename "$(dirname "$selected")")
+project=$(basename "$selected")
+selected_name="${parent}_${project}"
+echo "$selected_name"
+
 # generate a unique socket name
 socket_name="${selected_name}_sock"
 tmux_running=$(pgrep tmux)
 
 if [[ -d $HOME/.local/share/tmux/resurrect ]]; then
     for file in $HOME/.local/share/tmux/resurrect/tmux_resurrect_*; do
-        session_name=$(awk 'NR==1 {print $2}' $file)
-        if [[ $session_name == $selected_name ]]; then
+        # Skip if not a regular file
+        [ -f "$file" ] || continue
+
+        session_path=$(awk 'NR==1 {print $8}' $file)
+        session_path=${session_path#:}
+        if [[ $session_path == $selected ]]; then
             ln -sf $file $HOME/.local/share/tmux/resurrect/last
         fi
     done

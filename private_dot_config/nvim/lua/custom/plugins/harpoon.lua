@@ -12,12 +12,12 @@ return {
       -- Keybindings
       local map = vim.keymap.set
 
-      map('n', '<leader><leader>a', function()
+      map('n', '<leader>oa', function()
         harpoon:list():add()
-      end, { desc = '[H]arpoon [A]dd' })
-      map('n', '<leader><leader>e', function()
+      end, { desc = 'Harp[o]on [A]dd' })
+      map('n', '<leader>oe', function()
         harpoon.ui:toggle_quick_menu(harpoon:list())
-      end, { desc = '[H]arpoon [E]xplore' })
+      end, { desc = 'Harp[o]n [E]xplore' })
       map('n', '<leader>1', function()
         harpoon:list():select(1)
       end, { desc = '[H]arpoon [1] mark' })
