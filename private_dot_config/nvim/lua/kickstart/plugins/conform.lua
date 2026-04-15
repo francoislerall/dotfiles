@@ -37,10 +37,14 @@ return {
         sh = { 'beautysh' },
         zsh = { 'beautysh' },
         go = { 'gofmt' },
-        typescript = { 'prettierd', 'prettier' },
         yaml = { 'prettierd', 'prettier' },
         markdown = { 'prettierd', 'prettier' },
         html = { 'prettierd', 'prettier' },
+
+        javascript = { 'prettierd', 'prettier', 'biome-organize-imports' },
+        javascriptreact = { 'prettierd', 'prettier', 'biome-organize-imports' },
+        typescript = { 'prettierd', 'prettier', 'biome-organize-imports' },
+        typescriptreact = { 'prettierd', 'prettier', 'biome-organize-imports' },
 
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },

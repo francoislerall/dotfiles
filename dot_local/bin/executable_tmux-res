@@ -19,7 +19,7 @@ else
     selected=$(find \
             ~/code/onlineLCA/ \
             ~/code/olca/ \
-            ~/code/manual/ \
+            ~/code/manuals/ \
             ~/code/tutorial/ \
             ~/code/openLCA/ \
             ~/code/openLCA/olca-app/ \
@@ -27,10 +27,10 @@ else
             ~/code/FCH-LCA/ \
             ~/code/terraform/ \
             ~/code/web/ \
-            ~/code/FPM/ \
             ~/code/python \
             ~/code/cs \
             ~/code/GCCA \
+            ~/code/collectLCA/ \
         -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
@@ -40,7 +40,7 @@ fi
 
 
 
-parent=$(basename "$(dirname "$selected")")
+parent=$(basename "$(dirname "$selected")" | tr '.' '_')
 project=$(basename "$selected")
 selected_name="${parent}_${project}"
 echo "$selected_name"

@@ -1,3 +1,6 @@
+-- Setting: no tab expansion
+vim.opt_local.expandtab = false
+
 local jdtls = require 'jdtls'
 
 -- Resolve JDTLS paths installed via Mason
@@ -11,6 +14,8 @@ local workspace_dir = home .. '/.cache/jdtls/workspace/' .. vim.fn.fnamemodify(v
 local root_dir = vim.fs.root(0, { 'pom.xml' })
 
 local lombok_path = home .. '/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar'
+
+local style_path = home .. '/.config/nvim/format/eclipse-java-google-style.xml'
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
@@ -73,6 +78,13 @@ local config = {
     java = {
       project = {
         referencedLibraries = {},
+      },
+      format = {
+        enabled = true,
+        settings = {
+          url = style_path,
+          profile = 'GoogleStyle',
+        },
       },
     },
   },

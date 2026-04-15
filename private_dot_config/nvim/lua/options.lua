@@ -69,3 +69,6 @@ vim.opt.scrolloff = 10
 -- zg – Good word: Add the word under the cursor to the dictionary
 -- zw – Woops! Undo and remove the word from the dictionary
 vim.opt.spell = true
+
+-- Set the visual tab width
+vim.opt.tabstop = 2

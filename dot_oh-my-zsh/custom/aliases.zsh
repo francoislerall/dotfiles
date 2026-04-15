@@ -16,6 +16,10 @@ olcapy() {
 localbin() {
     cd ~/.local/bin && "$EDITOR" .
 }
+chezmoiconf() {
+    tmux-res ~/.local/share/chezmoi/
+}
+alias alacrittyconf="nvim ~/.config/alacritty/alacritty.toml"
 
 alias py="python3.12"
 
@@ -39,6 +43,6 @@ alias tfo='tofu output'
 alias tfor='tofu output -raw'
 
 # SSH to Proxmox
-alias sshprox1="ssh root@51.89.67.15"
-alias sshprox2="ssh root@54.36.108.24"
-
+alias sshprox1="ssh root@51.89.67.15 -L 9001:51.89.67.15:8006"
+alias sshprox2="ssh root@54.36.108.24 -L 9002:54.36.108.24:8006"
+alias sshprox3="ssh root@51.83.140.180 -L 9003:51.83.140.180:8006"
