@@ -1,0 +1,4 @@
+pane	lca-collaboration-server-docker	0	1	:*	0	TP-X1	:/home/francois/code/cs/lca-collaboration-server-docker	0	nvim	:nvim
+pane	lca-collaboration-server-docker	0	1	:*	1	TP-X1	:/home/francois/code/cs/lca-collaboration-server-docker	1	zsh	:
+window	lca-collaboration-server-docker	0	:zsh	1	:*	3bbe,191x42,0,0[191x26,0,0,0,191x15,0,27,1]	:
+state	lca-collaboration-server-docker	

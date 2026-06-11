@@ -1,0 +1,4 @@
+pane	collaboration-server	0	1	:*	0	TP-X1	:/home/francois/code/cs/collaboration-server	0	nvim	:nvim
+pane	collaboration-server	0	1	:*	1	TP-X1	:/home/francois/code/cs/collaboration-server	1	zsh	:
+window	collaboration-server	0	:zsh	1	:*	3bbe,191x42,0,0[191x26,0,0,0,191x15,0,27,1]	:
+state	collaboration-server	

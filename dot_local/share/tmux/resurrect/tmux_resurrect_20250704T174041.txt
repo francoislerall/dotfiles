@@ -1,0 +1,4 @@
+pane	readme	0	1	:*Z	0	TP-X1	:/home/francois/code/terraform/readme	1	nvim	:nvim
+pane	readme	0	1	:*Z	1	TP-X1	:/home/francois/code/terraform/readme	0	zsh	:
+window	readme	0	:nvim	1	:*Z	4fbb,191x40,0,0[191x20,0,0,0,191x19,0,21,1]	:
+state	readme	

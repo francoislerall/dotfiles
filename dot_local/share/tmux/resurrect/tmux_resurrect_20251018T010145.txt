@@ -1,0 +1,6 @@
+pane	terraform_freudenberg	0	1	:*Z	0	TP-X1	:/home/francois/code/terraform/freudenberg	1	nvim	:nvim
+pane	terraform_freudenberg	0	1	:*Z	1	TP-X1	:/home/francois/code/terraform/freudenberg	0	zsh	:
+pane	terraform_freudenberg	1	0	:-	0	TP-X1	:/home/francois/code/terraform/freudenberg	1	zsh	:
+window	terraform_freudenberg	0	:nvim	1	:*Z	bbc0,191x42,0,0[191x26,0,0,1,191x15,0,27,2]	:
+window	terraform_freudenberg	1	:zsh	0	:-	b540,191x42,0,0,3	:
+state	terraform_freudenberg	

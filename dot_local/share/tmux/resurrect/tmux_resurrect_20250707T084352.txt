@@ -1,0 +1,3 @@
+pane	fpm	0	1	:*	0	TP-X1	:/home/francois/code/terraform/fpm/main	1	zsh	:
+window	fpm	0	:zsh	1	:*	b53d,191x42,0,0,0	:
+state	fpm	

@@ -1,0 +1,6 @@
+pane	ConcreteEpd-CLIENT	0	1	:*Z	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	1	nvim	:nvim
+pane	ConcreteEpd-CLIENT	0	1	:*Z	1	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	0	zsh	:
+pane	ConcreteEpd-CLIENT	1	0	:-	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	1	zsh	:
+window	ConcreteEpd-CLIENT	0	:nvim	1	:*Z	6f3d,191x42,0,0[191x21,0,0,0,191x20,0,22,1]	:
+window	ConcreteEpd-CLIENT	1	:zsh	0	:-	b53f,191x42,0,0,2	:
+state	ConcreteEpd-CLIENT	

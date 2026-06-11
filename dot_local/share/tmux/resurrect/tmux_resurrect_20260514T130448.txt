@@ -1,0 +1,4 @@
+pane	terraform_pcfcollector	0	1	:*	0	TP-X1	:/home/francois/code/terraform/pcfcollector	0	nvim	:nvim
+pane	terraform_pcfcollector	0	1	:*	1	TP-X1	:/home/francois/code/terraform/pcfcollector	1	zsh	:
+window	terraform_pcfcollector	0	:zsh	1	:*	da6e,145x33,0,0[145x16,0,0,0,145x16,0,17,1]	:
+state	terraform_pcfcollector	

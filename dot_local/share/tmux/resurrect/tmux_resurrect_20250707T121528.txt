@@ -1,0 +1,4 @@
+pane	watcher	0	1	:*Z	0	TP-X1	:/home/francois/code/terraform/watcher	1	nvim	:nvim
+pane	watcher	0	1	:*Z	1	TP-X1	:/home/francois/code/terraform/watcher	0	zsh	:
+window	watcher	0	:nvim	1	:*Z	4fbb,191x40,0,0[191x20,0,0,0,191x19,0,21,1]	:
+state	watcher	

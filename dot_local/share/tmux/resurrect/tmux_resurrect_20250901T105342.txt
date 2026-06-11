@@ -1,0 +1,11 @@
+pane	EPD	0	1	:*Z	0	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER	1	nvim	:nvim
+pane	EPD	0	1	:*Z	1	TP-X1	:/home/francois/code/GCCA/EPD	0	zsh	:
+pane	EPD	1	0	:	0	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER	0	docker	:docker compose up
+pane	EPD	1	0	:	1	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER	0	java	:/usr/bin/java -classpath /opt/maven/boot/plexus-classworlds-2.6.0.jar -Dclassworlds.conf=/opt/maven/bin/m2.conf -Dmaven.home=/opt/maven -Dlibrary.jansi.path=/opt/maven/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run -Dspring.profiles.active=local -DskipTests
+pane	EPD	1	0	:	2	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-CLIENT	1	ng	:ng serve --configuration development
+pane	EPD	2	0	:-	0	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-CLIENT	1	nvim	:nvim
+pane	EPD	2	0	:-	1	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-CLIENT	0	zsh	:
+window	EPD	0	:nvim	1	:*Z	6f3e,191x42,0,0[191x21,0,0,0,191x20,0,22,3]	:
+window	EPD	1	:ng	0	:	0a8e,191x42,0,0[191x21,0,0{95x21,0,0,1,95x21,96,0,6},191x20,0,22,5]	:
+window	EPD	2	:nvim	0	:-	6f44,191x42,0,0[191x21,0,0,2,191x20,0,22,7]	:
+state	EPD	

@@ -1,0 +1,10 @@
+pane	ConcreteEpd-CLIENT	0	1	:*Z	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	1	nvim	:nvim
+pane	ConcreteEpd-CLIENT	0	1	:*Z	1	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	0	zsh	:
+pane	ConcreteEpd-CLIENT	1	0	:	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	1	nvim	:nvim
+pane	ConcreteEpd-CLIENT	2	0	:-	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	1	java	:java -jar /home/francois/code/GCCA/ConcreteEpd-SERVER/target/concrete-productEpd-tool-3.1.4.jar
+pane	ConcreteEpd-SERVER	0	1	:*	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	1	zsh	:
+window	ConcreteEpd-CLIENT	0	:nvim	1	:*Z	cfbd,191x40,0,0[191x20,0,0,1,191x19,0,21,2]	:
+window	ConcreteEpd-CLIENT	1	:nvim	0	:	ad40,191x40,0,0,3	:
+window	ConcreteEpd-CLIENT	2	:java	0	:-	ad42,191x40,0,0,5	:
+window	ConcreteEpd-SERVER	0	:zsh	1	:*	ad41,191x40,0,0,4	:
+state	ConcreteEpd-CLIENT	ConcreteEpd-SERVER

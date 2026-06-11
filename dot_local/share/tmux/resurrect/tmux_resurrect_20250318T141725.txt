@@ -1,0 +1,4 @@
+pane	openLCAJython-manual	0	1	:*Z	0	TP-X1	:/home/francois/code/olca/openLCAJython-manual	1	nvim	:nvim
+pane	openLCAJython-manual	0	1	:*Z	1	TP-X1	:/home/francois/code/olca/openLCAJython-manual	0	mdbook	:mdbook serve --open
+window	openLCAJython-manual	0	:nvim	1	:*Z	02c0,191x42,0,0[191x31,0,0,1,191x10,0,32,2]	:
+state	openLCAJython-manual	

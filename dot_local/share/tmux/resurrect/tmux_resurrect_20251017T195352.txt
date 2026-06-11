@@ -1,0 +1,7 @@
+pane	collectLCA_pcf-collector	0	1	:*Z	0	TP-X1	:/home/francois/code/collectLCA/pcf-collector	1	nvim	:nvim
+pane	collectLCA_pcf-collector	0	1	:*Z	1	TP-X1	:/home/francois/code/collectLCA/pcf-collector	0	zsh	:
+pane	collectLCA_pcf-collector	1	0	:-	0	TP-X1	:/home/francois/code/collectLCA/pcf-collector/server	1	java	:/usr/bin/java -classpath /opt/maven/boot/plexus-classworlds-2.6.0.jar -Dclassworlds.conf=/opt/maven/bin/m2.conf -Dmaven.home=/opt/maven -Dlibrary.jansi.path=/opt/maven/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/francois/code/collectLCA/pcf-collector/server org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run -Dspring-boot.run.profiles=test
+pane	collectLCA_pcf-collector	1	0	:-	1	TP-X1	:/home/francois/code/collectLCA/pcf-collector/ui	0	npm	:npm run dev
+window	collectLCA_pcf-collector	0	:nvim	1	:*Z	12bc,191x40,0,0[191x25,0,0,0,191x14,0,26,1]	:
+window	collectLCA_pcf-collector	1	:java	0	:-	4fc0,191x40,0,0[191x20,0,0,2,191x19,0,21,3]	:
+state	collectLCA_pcf-collector	

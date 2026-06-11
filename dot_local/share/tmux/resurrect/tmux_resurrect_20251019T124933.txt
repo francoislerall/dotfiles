@@ -1,0 +1,9 @@
+pane	onlineLCA_onlinelca	0	1	:*	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	nvim	:nvim
+pane	onlineLCA_onlinelca	0	1	:*	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	zsh	:
+pane	onlineLCA_onlinelca	1	0	:-	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	zsh	:
+pane	onlineLCA_onlinelca	1	0	:-	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	docker	:docker compose -f build/docker-compose.yml up db
+pane	onlineLCA_onlinelca	1	0	:-	2	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-web-app
+pane	onlineLCA_onlinelca	1	0	:-	3	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-web-map
+window	onlineLCA_onlinelca	0	:nvim	1	:*	92be,191x40,0,0[191x25,0,0,1,191x14,0,26,2]	:
+window	onlineLCA_onlinelca	1	:zsh	0	:-	c179,191x40,0,0[191x25,0,0,9,191x14,0,26{95x14,0,26,10,47x14,96,26,11,47x14,144,26,12}]	:
+state	onlineLCA_onlinelca	

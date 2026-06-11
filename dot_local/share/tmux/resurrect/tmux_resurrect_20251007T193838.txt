@@ -1,0 +1,6 @@
+pane	manual_openLCAJython-manual	0	1	:*Z	0	TP-X1	:/home/francois/code/manual/openLCAJython-manual	1	nvim	:nvim
+pane	manual_openLCAJython-manual	0	1	:*Z	1	TP-X1	:/home/francois/code/manual/openLCAJython-manual	0	zsh	:
+pane	manual_openLCAJython-manual	1	0	:-	0	TP-X1	:/home/francois/code/manual/openLCAJython-manual	1	mdbook	:mdbook serve --port 3030
+window	manual_openLCAJython-manual	0	:nvim	1	:*Z	12bc,191x40,0,0[191x25,0,0,0,191x14,0,26,1]	:
+window	manual_openLCAJython-manual	1	:mdbook	0	:-	ad3f,191x40,0,0,2	:
+state	manual_openLCAJython-manual	

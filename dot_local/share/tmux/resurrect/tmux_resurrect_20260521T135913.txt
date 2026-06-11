@@ -1,0 +1,9 @@
+pane	onlineLCA_onlinelca	0	1	:*Z	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	nvim	:nvim
+pane	onlineLCA_onlinelca	0	1	:*Z	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	zsh	:
+pane	onlineLCA_onlinelca	1	0	:-	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-backend
+pane	onlineLCA_onlinelca	1	0	:-	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-db
+pane	onlineLCA_onlinelca	1	0	:-	2	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	make	:make run-pdf-converter
+pane	onlineLCA_onlinelca	1	0	:-	3	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-frontend
+window	onlineLCA_onlinelca	0	:nvim	1	:*Z	91fb,174x40,0,0[174x20,0,0,0,174x19,0,21,1]	:
+window	onlineLCA_onlinelca	1	:make	0	:-	8d57,174x40,0,0[174x25,0,0,2,174x14,0,26{46x14,0,26,3,45x14,47,26,4,81x14,93,26,5}]	:
+state	onlineLCA_onlinelca	

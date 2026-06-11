@@ -1,0 +1,3 @@
+pane	olca_olca-ipc_ts	0	1	:*	0	TP-X1	:/home/francois/code/olca/olca-ipc_ts	1	nvim	:nvim
+window	olca_olca-ipc_ts	0	:nvim	1	:*	b7fd,145x33,0,0,0	:
+state	olca_olca-ipc_ts	

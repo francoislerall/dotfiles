@@ -1,0 +1,6 @@
+pane	ConcreteEpd-CLIENT	0	1	:*Z	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	1	nvim	:nvim
+pane	ConcreteEpd-CLIENT	0	1	:*Z	1	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	0	zsh	:ng completion script
+pane	ConcreteEpd-CLIENT	1	0	:-	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	1	ng	:ng serve --configuration development
+window	ConcreteEpd-CLIENT	0	:nvim	1	:*Z	4fbe,191x40,0,0[191x20,0,0,1,191x19,0,21,3]	:
+window	ConcreteEpd-CLIENT	1	:ng	0	:-	ad3f,191x40,0,0,2	:
+state	ConcreteEpd-CLIENT	

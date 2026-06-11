@@ -1,0 +1,8 @@
+pane	GCCA_ConcreteEpd-SERVER	0	1	:*Z	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	1	nvim	:nvim
+pane	GCCA_ConcreteEpd-SERVER	0	1	:*Z	1	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	0	zsh	:
+pane	GCCA_ConcreteEpd-SERVER	1	0	:-	0	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	0	docker	:docker compose up
+pane	GCCA_ConcreteEpd-SERVER	1	0	:-	1	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-SERVER	1	zsh	:
+pane	GCCA_ConcreteEpd-SERVER	1	0	:-	2	TP-X1	:/home/francois/code/GCCA/ConcreteEpd-CLIENT	0	ng	:ng serve --configuration development
+window	GCCA_ConcreteEpd-SERVER	0	:nvim	1	:*Z	bbc0,191x42,0,0[191x26,0,0,1,191x15,0,27,2]	:
+window	GCCA_ConcreteEpd-SERVER	1	:zsh	0	:-	0c9c,191x42,0,0[191x21,0,0{95x21,0,0,3,95x21,96,0,4},191x20,0,22,5]	:
+state	GCCA_ConcreteEpd-SERVER	

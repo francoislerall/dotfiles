@@ -1,0 +1,7 @@
+pane	onlineLCA_pdf-converter	0	1	:*Z	0	TP-X1	:/home/francois/code/onlineLCA/pdf-converter	1	nvim	:nvim .
+pane	onlineLCA_pdf-converter	0	1	:*Z	1	TP-X1	:/home/francois/code/onlineLCA/pdf-converter	0	zsh	:
+pane	onlineLCA_pdf-converter	1	0	:-	0	TP-X1	:/home/francois/code/onlineLCA/pdf-converter	0	python3	:/home/francois/code/onlineLCA/pdf-converter/.venv/bin/python3 /home/francois/code/onlineLCA/pdf-converter/.venv/bin/uvicorn app:app --reload
+pane	onlineLCA_pdf-converter	1	0	:-	1	TP-X1	:/home/francois/code/onlineLCA/pdf-converter/test	1	zsh	:
+window	onlineLCA_pdf-converter	0	:nvim	1	:*Z	da6e,145x33,0,0[145x16,0,0,0,145x16,0,17,1]	:
+window	onlineLCA_pdf-converter	1	:zsh	0	:-	3bf4,145x33,0,0{72x33,0,0,2,72x33,73,0,3}	:
+state	onlineLCA_pdf-converter	

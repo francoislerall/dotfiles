@@ -1,0 +1,4 @@
+pane	share_chezmoi	0	1	:*Z	0	TP-X1	:/home/francois/.local/share/chezmoi	1	nvim	:nvim
+pane	share_chezmoi	0	1	:*Z	1	TP-X1	:/home/francois/.local/share/chezmoi	0	zsh	:
+window	share_chezmoi	0	:nvim	1	:*Z	3bbe,191x42,0,0[191x26,0,0,0,191x15,0,27,1]	:
+state	share_chezmoi	

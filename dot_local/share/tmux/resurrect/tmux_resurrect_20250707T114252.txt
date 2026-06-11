@@ -1,0 +1,7 @@
+pane	onlinelca	0	1	:*Z	0	TP-X1	:/home/francois/code/terraform/onlinelca	1	nvim	:nvim
+pane	onlinelca	0	1	:*Z	1	TP-X1	:/home/francois/code/terraform/onlinelca	0	zsh	:
+pane	pcfcollector	0	1	:*	0	TP-X1	:/home/francois/code/terraform/pcfcollector	1	nvim	:nvim
+pane	pcfcollector	0	1	:*	1	TP-X1	:/home/francois/code/terraform/pcfcollector	0	zsh	:
+window	onlinelca	0	:nvim	1	:*Z	12bd,191x40,0,0[191x25,0,0,0,191x14,0,26,3]	:
+window	pcfcollector	0	:nvim	1	:*	92be,191x40,0,0[191x25,0,0,1,191x14,0,26,2]	:
+state	onlinelca	

@@ -1,0 +1,7 @@
+pane	fpm-pcf-tool	0	0	:-	0	TP-X1	:/home/francois/code/FPM/fpm-pcf-tool	1	nvim	:nvim
+pane	fpm-pcf-tool	0	0	:-	1	TP-X1	:/home/francois/code/FPM/fpm-pcf-tool	0	zsh	:
+pane	fpm-pcf-tool	1	1	:*	0	TP-X1	:/home/francois/code/FPM/fpm-pcf-tool	0	java	:java -jar /home/francois/code/FPM/fpm-pcf-tool/build/server.jar
+pane	fpm-pcf-tool	1	1	:*	1	TP-X1	:/home/francois/code/FPM/fpm-pcf-tool/ui	1	npm	:npm run dev
+window	fpm-pcf-tool	0	:nvim	0	:-	02c0,191x42,0,0[191x31,0,0,1,191x10,0,32,2]	:
+window	fpm-pcf-tool	1	:npm	1	:*	b9ac,191x42,0,0{125x42,0,0,3,65x42,126,0,4}	:
+state	fpm-pcf-tool	

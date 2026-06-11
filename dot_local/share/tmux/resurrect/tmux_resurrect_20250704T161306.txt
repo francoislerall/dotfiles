@@ -1,0 +1,4 @@
+pane	readme	0	1	:*	0	TP-X1	:/home/francois/code/tf/readme	0	nvim	:nvim
+pane	readme	0	1	:*	1	TP-X1	:/home/francois/code/tf/readme	1	zsh	:
+window	readme	0	:zsh	1	:*	4fbb,191x40,0,0[191x20,0,0,0,191x19,0,21,1]	:
+state	readme	

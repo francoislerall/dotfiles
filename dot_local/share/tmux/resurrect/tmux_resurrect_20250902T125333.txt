@@ -1,0 +1,10 @@
+pane	EPD	0	1	:*Z	0	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER	1	nvim	:nvim
+pane	EPD	0	1	:*Z	1	TP-X1	:/home/francois/code/GCCA/EPD	0	zsh	:
+pane	EPD	1	0	:-	0	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER	1	java	:/usr/bin/java -classpath /opt/maven/boot/plexus-classworlds-2.6.0.jar -Dclassworlds.conf=/opt/maven/bin/m2.conf -Dmaven.home=/opt/maven -Dlibrary.jansi.path=/opt/maven/lib/jansi-native -Dmaven.multiModuleProjectDirectory=/home/francois/code/GCCA/EPD/ConcreteEpd-SERVER org.codehaus.plexus.classworlds.launcher.Launcher spring-boot:run -Dspring.profiles.active=local -DskipTests
+pane	EPD	1	0	:-	1	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-CLIENT	0	ng	:ng serve --configuration development
+pane	EPD	2	0	:	0	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-CLIENT	1	nvim	:nvim
+pane	EPD	2	0	:	1	TP-X1	:/home/francois/code/GCCA/EPD/ConcreteEpd-CLIENT	0	zsh	:
+window	EPD	0	:nvim	1	:*Z	ef3f,191x42,0,0[191x21,0,0,1,191x20,0,22,2]	:
+window	EPD	1	:java	0	:-	ef44,191x42,0,0[191x21,0,0,3,191x20,0,22,4]	:
+window	EPD	2	:nvim	0	:	ef49,191x42,0,0[191x21,0,0,5,191x20,0,22,6]	:
+state	EPD	

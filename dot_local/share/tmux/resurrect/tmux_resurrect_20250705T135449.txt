@@ -1,0 +1,4 @@
+pane	mysql	0	1	:*Z	0	TP-X1	:/home/francois/code/terraform/mysql	1	nvim	:nvim
+pane	mysql	0	1	:*Z	1	TP-X1	:/home/francois/code/terraform/mysql	0	zsh	:
+window	mysql	0	:nvim	1	:*Z	12bc,191x40,0,0[191x25,0,0,0,191x14,0,26,1]	:
+state	mysql	

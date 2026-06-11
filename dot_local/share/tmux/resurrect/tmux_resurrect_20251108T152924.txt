@@ -1,0 +1,7 @@
+pane	collectLCA_pcf-collector	0	1	:*Z	0	TP-X1	:/home/francois/code/collectLCA/pcf-collector	1	nvim	:nvim
+pane	collectLCA_pcf-collector	0	1	:*Z	1	TP-X1	:/home/francois/code/collectLCA/pcf-collector	0	zsh	:
+pane	collectLCA_pcf-collector	1	0	:-	0	TP-X1	:/home/francois/code/collectLCA/pcf-collector	1	java	:java -jar /home/francois/code/collectLCA/pcf-collector/build/server.jar
+pane	collectLCA_pcf-collector	1	0	:-	1	TP-X1	:/home/francois/code/collectLCA/pcf-collector/ui	0	npm	:npm run dev
+window	collectLCA_pcf-collector	0	:nvim	1	:*Z	bd05,174x37,0,0[174x18,0,0,1,174x18,0,19,2]	:
+window	collectLCA_pcf-collector	1	:java	0	:-	bd0a,174x37,0,0[174x18,0,0,3,174x18,0,19,4]	:
+state	collectLCA_pcf-collector	

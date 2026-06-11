@@ -1,0 +1,4 @@
+pane	olca-app-html	0	1	:*Z	0	TP-X1	:/home/francois/code/openLCA/olca-app/olca-app-html	1	nvim	:nvim
+pane	olca-app-html	0	1	:*Z	1	TP-X1	:/home/francois/code/openLCA/olca-app/olca-app-html	0	zsh	:
+window	olca-app-html	0	:nvim	1	:*Z	6f3d,191x42,0,0[191x21,0,0,0,191x20,0,22,1]	:
+state	olca-app-html	

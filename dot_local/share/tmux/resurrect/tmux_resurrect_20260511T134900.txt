@@ -1,0 +1,4 @@
+pane	olca_olca-ipc_ts	0	1	:*	0	TP-X1	:/home/francois/code/olca/olca-ipc_ts	0	nvim	:nvim
+pane	olca_olca-ipc_ts	0	1	:*	1	TP-X1	:/home/francois/code/olca/olca-ipc_ts	1	zsh	:
+window	olca_olca-ipc_ts	0	:zsh	1	:*	da6e,145x33,0,0[145x16,0,0,0,145x16,0,17,1]	:
+state	olca_olca-ipc_ts	

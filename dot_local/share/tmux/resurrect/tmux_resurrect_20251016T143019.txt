@@ -1,0 +1,4 @@
+pane	servers_onlinelca	0	1	:*Z	0	TP-X1	:/home/francois/code/servers/onlinelca	1	ssh	:ssh root@dev.onlinelca.greendelta.com
+pane	servers_onlinelca	0	1	:*Z	1	TP-X1	:/home/francois/code/servers/onlinelca	0	ssh	:ssh root@dev.onlinelca.greendelta.com
+window	servers_onlinelca	0	:ssh	1	:*Z	6f3d,191x42,0,0[191x21,0,0,0,191x20,0,22,1]	:
+state	servers_onlinelca	

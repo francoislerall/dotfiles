@@ -1,0 +1,9 @@
+pane	onlineLCA_onlinelca	0	1	:*Z	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	nvim	:nvim
+pane	onlineLCA_onlinelca	0	1	:*Z	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	zsh	:
+pane	onlineLCA_onlinelca	1	0	:-	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	make	:make run-app
+pane	onlineLCA_onlinelca	1	0	:-	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	docker	:docker compose -f ./build/docker-compose-mariadb.yml up
+pane	onlineLCA_onlinelca	1	0	:-	2	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-web-app
+pane	onlineLCA_onlinelca	1	0	:-	3	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-web-map
+window	onlineLCA_onlinelca	0	:nvim	1	:*Z	0405,174x37,0,0[174x23,0,0,1,174x13,0,24,2]	:
+window	onlineLCA_onlinelca	1	:make	0	:-	e6ba,174x37,0,0[174x23,0,0,3,174x13,0,24{89x13,0,24,4,41x13,90,24,5,42x13,132,24,6}]	:
+state	onlineLCA_onlinelca	

@@ -1,0 +1,4 @@
+pane	openLCA_olca-app	0	1	:*Z	0	TP-X1	:/home/francois/code/openLCA/olca-app	1	nvim	:nvim
+pane	openLCA_olca-app	0	1	:*Z	1	TP-X1	:/home/francois/code/openLCA/olca-app	0	zsh	:
+window	openLCA_olca-app	0	:nvim	1	:*Z	3bbe,191x42,0,0[191x26,0,0,0,191x15,0,27,1]	:
+state	openLCA_olca-app	

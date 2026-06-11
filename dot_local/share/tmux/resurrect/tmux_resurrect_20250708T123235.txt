@@ -1,0 +1,3 @@
+pane	nvim	0	1	:*	0	TP-X1	:/home/francois/.config/nvim	1	nvim	:nvim
+window	nvim	0	:nvim	1	:*	ad3d,191x40,0,0,0	:
+state	nvim	

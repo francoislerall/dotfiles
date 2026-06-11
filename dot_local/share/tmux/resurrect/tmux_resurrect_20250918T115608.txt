@@ -1,0 +1,9 @@
+pane	onlineLCA_onlinelca	0	1	:*Z	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	nvim	:nvim
+pane	onlineLCA_onlinelca	0	1	:*Z	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	zsh	:
+pane	onlineLCA_onlinelca	1	0	:-	0	TP-X1	:/home/francois/code/onlineLCA/onlinelca	1	make	:make run-app
+pane	onlineLCA_onlinelca	1	0	:-	1	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-web-app
+pane	onlineLCA_onlinelca	1	0	:-	2	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-web-map
+pane	onlineLCA_onlinelca	1	0	:-	3	TP-X1	:/home/francois/code/onlineLCA/onlinelca	0	make	:make run-spring
+window	onlineLCA_onlinelca	0	:nvim	1	:*Z	92be,191x40,0,0[191x25,0,0,1,191x14,0,26,2]	:
+window	onlineLCA_onlinelca	1	:make	0	:-	93e0,191x40,0,0[191x20,0,0{95x20,0,0,3,47x20,96,0,4,47x20,144,0,5},191x19,0,21,6]	:
+state	onlineLCA_onlinelca	
